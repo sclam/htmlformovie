@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<meta name="theme-color" content="#3f51b5">
+	<title>Speeds -极速</title>
+	<!-- css -->
+	<link href="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/base.min.css" rel="stylesheet">
+	<link href="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/project.min.css" rel="stylesheet">
+	<link href="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/css?family=Roboto:300,300italic,400,400italic,500,500italic" rel="stylesheet">
+	<link href="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/css1?family=Material+Icons" rel="stylesheet">
+
+	<!-- favicon -->
+
+	<!-- ... -->
+</head>
+  <style>
+.divcss5{ position:fixed; bottom:0;}
+</style>
+<body class="page-brand">
+	<header class="header header-transparent header-waterfall ui-header">
+		<ul class="nav nav-list pull-left">
+		  <li> <a data-toggle="menu" href="#ui_menu"> <em class="iconfont"></em> </a> </li>
+	  </ul>
+
+		<ul class="nav nav-list pull-right">
+			<li class="dropdown margin-right">
+				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+									<span class="access-hide">未登录</span>
+					<span class="avatar avatar-sm"></span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li>
+							<a class="padding-right-lg waves-attach" href="/auth/login"><i class="iconfont">&#xe728;</i>&nbsp&nbsp&nbsp登录</a>
+						</li>
+						<li>
+							<a class="padding-right-lg waves-attach" href="/auth/register"><i class="iconfont">&#xe60e;</i>&nbsp&nbsp&nbsp注册</a>
+						</li>
+			  </ul>
+				
+		  </li>
+		</ul>
+	</header>
+	<nav aria-hidden="true" class="menu menu-left nav-drawer nav-drawer-md" id="ui_menu" tabindex="-1">
+		<div class="menu-scroll">
+			<div class="menu-content"><a class="menu-logo" href="/bestvote.html"><em class="iconfont"></em> 点击投票</a>
+			  <ul class="nav">
+			    <li> <a href="/index.html"><em class="iconfont"></em> 登录</a> </li>
+			    <li> <a href="/register.html"><em class="iconfont"></em> 注册</a> </li>
+					<li>
+				     <a  href="/reset.html"><i class="iconfont">&#xe767;</i>&nbsp;重置密码</a>
+					</li>
+
+
+			  </ul>
+			</div>
+	  </div>
+</nav>
+
+
+<main class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
+					<section class="content-inner">
+						<div class="card">
+							<div class="card-main">
+								<div class="card-header">
+									<div class="card-inner">
+									<!-- 这里可以取消掉注释换logo图。
+									<h1 class="card-heading"><img src="/images/register.jpg" height=100% width=100% /></h1>
+									-->
+									<h1 class="card-heading">
+										<div class="text" style=" text-align:center;">
+											电影平台推荐系统
+										</div>
+										<div class="text" style=" text-align:center;font-weight: bold;">
+											注册
+										</div>
+									</h1>
+									</div>
+								</div>
+																<div class="card-inner">
+
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="name">昵称</label>
+													<input class="form-control" id="name" type="text">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="email">邮箱(唯一凭证请认真对待)</label>
+													<input class="form-control" id="email" type="text">
+												</div>
+											</div>
+										</div>
+																				<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="email_code">邮箱验证码</label>
+													<input class="form-control" id="email_code" type="text" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;">
+													<button id="email_verify" class="btn btn-block btn-brand-accent waves-attach waves-light">点击获取验证码</button>
+												<!--	<a href="" onclick="return false;" data-toggle='modal' data-target='#email_nrcy_modal'>收不到验证码？点击这里</a>   -->
+												</div>
+											</div>
+										</div>
+
+										
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="passwd">密码</label>
+													<input class="form-control" id="passwd" type="password">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="repasswd">重复密码</label>
+													<input class="form-control" id="repasswd" type="password">
+												</div>
+											</div>
+										</div>
+
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="imtype">选择您的联络方式</label>
+													<select class="form-control" id="imtype">
+														<option></option>
+														<option value="1">微信</option>
+														<option value="2">QQ</option>
+														<option value="3">Facebook</option>
+														<option value="4">Telegram</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="form-group form-group-label">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<label class="floating-label" for="wechat">在这输入联络方式账号</label>
+													<input class="form-control" id="wechat" type="text">
+												</div>
+											</div>
+										</div>
+
+
+																					<div class="form-group form-group-label">
+												<div class="row">
+													<div class="col-md-10 col-md-push-1">
+													</div>
+												</div>
+											</div>
+										
+
+										
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+													<button id="tos" type="submit" class="btn btn-block btn-brand waves-attach waves-light">注册</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-10 col-md-push-1">
+												</div>
+											</div>
+										</div>
+																		<div class="clearfix">
+										<p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach" href="/index.html">已经注册？点我登录</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="result" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-xs">
+		<div class="modal-content">
+			<div class="modal-inner">
+				<p class="h5 margin-top-sm text-black-hint" id="msg"></p>
+			</div>
+			<div class="modal-footer">
+				<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" type="button" id="result_ok">知道了</button></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="tos_modal" role="dialog" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-heading">
+										<h2 class="modal-title">注册 TOS</h2>
+									</div>
+									<div class="modal-inner">
+										<ul>
+    <li>本站仅限中华人民共和国公民使用。</li>
+    <li><font color=red>禁止使用本站服务进行任何违法活动。</font></li>
+    <li><font color=red>所有用户必须遵守《计算机信息网络国际联网安全保护管理办法》以及中华人民共和国的相关法律法规，做爱国守法的好公民。</font></li>
+    <li><font color=red>所有用户在网络上请注意自己的言行举止。因为用户自身的原因造成任何不良影响和后果用户自行承担责任，与本站和本站的工作人员、站长没有任何关系！</font></li>
+    <li>禁止滥用本站提供的服务(禁止BT下载)。</li>
+    <li>禁止长时间霸占带宽以及每天大流量异常用户。</li>
+    <li>对于免费用户，我们有权在不通知的情况下删除账户。</li>
+    <li>如果你不愿意遵守以上条款的，请自行删号！如果发现用户违反以上条款将删除违规账户并没收使用本站服务的权利。</li>
+	<li>《Speeds极速——用户服务条款》更新时用户需要遵守最新的《Speeds极速——用户服务条款》。</li>
+</ul>									</div>
+									<div class="modal-footer">
+										<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button" id="cancel">我不同意</button>
+                                          <button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg" type="button">我同意</button>
+                                      </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="email_nrcy_modal" role="dialog" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-heading">
+										<h2 class="modal-title">收不到验证码？</h2>
+									</div>
+									<div class="modal-inner">
+										<ul>
+	<img src="/images/email_nrcy.jpg" height="458" width="468">
+	<br />
+	</ul>									</div>
+									<div class="modal-footer">
+										<p class="text-right">
+										<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">我知道了</button>
+                                      </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</section>
+				</div>
+			</div>
+		</div>
+</main>
+
+	<footer class="ui-footer">
+		<div class="container">
+			<marquee>&copy; 由腾讯云提供云计算服务 <amarquee>		</div>
+	</footer>
+
+
+
+
+	<!-- js -->
+<script src="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/jquery.min.js"></script>
+<script src="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/gt.js"></script>
+
+<script src="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/base.min.js"></script>
+<script src="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/project.min.js"></script>
+<script type="text/javascript" color="217,113,24" opacity="0.8" count="99" src="https://speedsvip-1252174734.cos.ap-shanghai.myqcloud.com/canvas-nest.js@1.0.1"></script>
+</body>
+</html>
+
+
+<script>
+    $(document).ready(function(){
+        function register(){
+          code = $("#code").val();
+    				document.getElementById("tos").disabled = true;
+
+            $.ajax({
+                type:"POST",
+                url:"/auth/register",
+                dataType:"json",
+                data:{
+                    email: $("#email").val(),
+                    name: $("#name").val(),
+                    passwd: $("#passwd").val(),
+                    repasswd: $("#repasswd").val(),
+					wechat: $("#wechat").val(),
+					imtype: $("#imtype").val(),
+					code:code,
+					emailcode: $("#email_code").val()                },
+                success:function(data){
+                    if(data.ret == 1){
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                        window.setTimeout("location.href='/auth/login'", 1200);
+                    }else{
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                        setCookie('code','',0);
+                        $("#code").val(getCookie('code'));
+						document.getElementById("tos").disabled = false;
+						                    }
+                },
+                error:function(jqXHR){
+			$("#msg-error").hide(10);
+			$("#msg-error").show(100);
+			$("#msg-error-p").html("发生错误："+jqXHR.status);
+			document.getElementById("tos").disabled = false;
+			                }
+            });
+        }
+        $("html").keydown(function(event){
+            if(event.keyCode==13){
+                $("#tos_modal").modal();
+            }
+        });
+
+		
+		$("#reg").click(function(){
+            register();
+        });
+
+		$("#tos").click(function(){
+			            $("#tos_modal").modal();
+        });
+    })
+</script>
+
+<script>
+var wait=60;
+function time(o) {
+		if (wait == 0) {
+			o.removeAttr("disabled");
+			o.text("获取验证码");
+			wait = 60;
+		} else {
+			o.attr("disabled","disabled");
+			o.text("重新发送(" + wait + ")");
+			wait--;
+			setTimeout(function() {
+				time(o)
+			},
+			1000)
+		}
+	}
+
+
+
+    $(document).ready(function () {
+        $("#email_verify").click(function () {
+			time($("#email_verify"));
+
+            $.ajax({
+                type: "POST",
+                url: "send",
+                dataType: "json",
+                data: {
+                    email: $("#email").val()
+                },
+                success: function (data) {
+                    if (data.ret) {
+                        $("#result").modal();
+			$("#msg").html(data.msg);
+
+                    } else {
+                        $("#result").modal();
+			$("#msg").html(data.msg);
+                    }
+                },
+                error: function (jqXHR) {
+                    $("#result").modal();
+			$("#msg").html(data.msg+"     出现了一些错误。");
+                }
+            })
+        })
+    })
+</script>
+
+
+<script>
+		function getQueryVariable(variable)
+	{
+	       var query = window.location.search.substring(1);
+	       var vars = query.split("&");
+	       for (var i=0;i<vars.length;i++) {
+	            	var pair = vars[i].split("=");
+	            	if(pair[0] == variable){
+	            		return pair[1];
+	            	}
+	       }
+	       return "";
+	}
+
+		function setCookie(cname,cvalue,exdays)
+	{
+	  var d = new Date();
+	  d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	  var expires = "expires="+d.toGMTString();
+	  document.cookie = cname + "=" + cvalue + "; " + expires;
+	}
+
+		function getCookie(cname)
+	{
+	  var name = cname + "=";
+	  var ca = document.cookie.split(';');
+	  for(var i=0; i<ca.length; i++) 
+	  {
+	    var c = ca[i].trim();
+	    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	  return "";
+	}
+
+		if (getQueryVariable('code')!=''){
+		setCookie('code',getQueryVariable('code'),30);
+		window.location.href='/auth/register'; 
+	}
+
+    		if ((getCookie('code'))!=''){
+		$("#code").val(getCookie('code'));
+	}
+	
+
+</script>
+
